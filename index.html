@@ -71,6 +71,8 @@
 		
 	</div>
 </div>
+	
+	<audio id="myAudio" src="http://www.wrapreak.com/music/zuichibi.mp3" autoplay="autoplay" preload="" loop="loop"></audio> 
 
 <script type="text/javascript">
 var offsetX = $("#loveHeart").width() / 2;
@@ -104,6 +106,15 @@ if (!document.createElement('canvas').getContext) {
 	adjustCodePosition();
 	$("#code").typewriter();
 }
+	
+	function audioAutoPlay(id){
+		var audio = document.getElementById(id);
+		audio.play();
+	document.addEventListener("WeixinJSBridgeReady", function () {
+		audio.play();
+        }, false);
+	}
+	audioAutoPlay('myAudio');
 </script>
 
 </body>
